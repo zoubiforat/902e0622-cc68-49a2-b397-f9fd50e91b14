@@ -6,7 +6,7 @@ export interface Event {
     _id: string;
     title: string;
     flyerFront: string;
-    attending: string;
+    attending: number;
     date: string;
     startTime: string;
     endTime: string;
