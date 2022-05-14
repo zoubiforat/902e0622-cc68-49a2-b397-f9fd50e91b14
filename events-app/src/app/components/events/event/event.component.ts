@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Event } from 'src/app/shared/models/event.model';
 
 @Component({
@@ -9,7 +9,7 @@ import { Event } from 'src/app/shared/models/event.model';
 export class EventComponent implements OnInit {
 
 
-  eventInput: Event =   {
+  @Input() eventInput: Event =   {
         "_id": "1463949",
         "title": "Fuego! with Om Unit, Ruby Savage, Iration Steppas, Jamie Rodigan, Pete OTC, Makin' Moves..",
         "flyerFront": "https://static.ra.co/images/events/flyer/2021/10/uk-1016-1463949-1809552-front.jpg?dateUpdated=1634114327453",
