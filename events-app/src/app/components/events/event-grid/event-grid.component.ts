@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { filter, map, tap } from 'rxjs';
 import { EventService } from 'src/app/services/events/event.service';
 import { Event } from 'src/app/shared/models/event.model';
 
@@ -19,6 +20,7 @@ export class EventGridComponent implements OnInit {
 
   getEvents(): void {
     this.eventService.getEvents()
+    .pipe(map(events => events.filter(event => event.date && event.startTime && event.endTime)))
     .subscribe(data => {
       this.events = data;
       console.log(this.events)
