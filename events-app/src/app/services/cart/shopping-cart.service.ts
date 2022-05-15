@@ -17,7 +17,7 @@ export class ShoppingCartService {
   }
 
   addEventToCart(event: Event): void {
-    if(!this.cartEvents.includes(event)) {
+    if(!this.cartEvents.some(e => e._id === event._id)) {
       this.cartEvents.push(event);
       this.eventsList.next(this.cartEvents);
     }
