@@ -4,7 +4,7 @@
             <h4 class="primaryColorClr ml-3"><strong>{{ dateEvents.date | date: 'EE MMM d y' | uppercase }}</strong></h4>
         </div>
         <div class="row">
-            <app-event *ngFor="let event of dateEvents.events" class="col-sm-12 col-lg-6 col-xl-4 mb-3" [eventInput]="event"></app-event>
+            <app-event *ngFor="let event of dateEvents.events" class="col-xs-12 col-md-6 col-lg-6 col-xl-4 mb-3" [eventInput]="event"></app-event>
         </div>
     </div>
 </div>
