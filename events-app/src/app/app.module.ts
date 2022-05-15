@@ -8,12 +8,14 @@ import { MaterialModule } from './shared/material.module';
 import { EventComponent } from './components/events/event/event.component';
 import { EventGridComponent } from './components/events/event-grid/event-grid.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToolbarComponent } from './components/toolbar/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventComponent,
-    EventGridComponent
+    EventGridComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
