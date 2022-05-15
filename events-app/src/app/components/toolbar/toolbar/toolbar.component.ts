@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from 'src/app/services/cart/shopping-cart.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,9 +10,13 @@ export class ToolbarComponent implements OnInit {
 
   cartCount: number = 0;
 
-  constructor() { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
+    this.shoppingCartService.getEventsInCart()
+    .subscribe(data => {
+      this.cartCount = data.length;
+    });
   }
 
 }

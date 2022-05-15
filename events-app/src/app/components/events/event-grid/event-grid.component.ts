@@ -38,8 +38,7 @@ export class EventGridComponent implements OnInit {
       map(dateEvents => {
         dateEvents.forEach(dateEvents => dateEvents.events.sort((event1, event2) => whichEventComesFirst(event1, event2)));
         return dateEvents;
-      })
-      // map(events => events.sort((event1, event2) => whichEventComesFirst)),
+      }),
       )
     .subscribe(data => {
       this.eventsByDate = data;

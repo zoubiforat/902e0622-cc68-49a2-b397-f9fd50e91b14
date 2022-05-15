@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ShoppingCartService } from 'src/app/services/cart/shopping-cart.service';
 import { Event } from 'src/app/shared/models/event.model';
 
 @Component({
@@ -79,9 +80,13 @@ export class EventComponent implements OnInit {
         "__v": 0
     };
 
-  constructor() { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
+  }
+
+  addToShoppingCart(): void {
+      this.shoppingCartService.addEventToCart(this.eventInput);
   }
 
 }

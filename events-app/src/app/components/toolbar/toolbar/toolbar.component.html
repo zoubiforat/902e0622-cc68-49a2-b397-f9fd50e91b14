@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <button mat-icon-button class="ml-auto">
-        <mat-icon *ngIf="cartCount > 0" matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+        <mat-icon *ngIf="cartCount > 0" matBadge="{{ cartCount }}" matBadgeColor="warn">shopping_cart</mat-icon>
         <mat-icon *ngIf="cartCount === 0">shopping_cart</mat-icon>
     </button>
 </mat-toolbar>
