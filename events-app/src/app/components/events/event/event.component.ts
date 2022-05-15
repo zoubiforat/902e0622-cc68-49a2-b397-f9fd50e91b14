@@ -80,13 +80,22 @@ export class EventComponent implements OnInit {
         "__v": 0
     };
 
+    productInCart: boolean = false;
+
   constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit(): void {
+      this.productInCart = this.shoppingCartService.isProductInCart(this.eventInput);
   }
 
   addToShoppingCart(): void {
       this.shoppingCartService.addEventToCart(this.eventInput);
+      this.productInCart = !this.productInCart;
+  }
+
+  removeFromShoppingCart(): void {
+      this.shoppingCartService.removeEventfromCart(this.eventInput);
+      this.productInCart = !this.productInCart;
   }
 
 }

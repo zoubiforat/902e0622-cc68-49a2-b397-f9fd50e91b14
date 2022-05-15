@@ -42,7 +42,6 @@ export class ShoppingCartListComponent implements OnInit {
       )
     .subscribe(data => {
       this.shoppingCartEvents = data;
-      console.log(this.shoppingCartEvents)
     });
   }
 

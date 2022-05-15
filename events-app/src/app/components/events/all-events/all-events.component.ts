@@ -42,7 +42,6 @@ export class AllEventsComponent implements OnInit {
       )
     .subscribe(data => {
       this.eventsByDate = data;
-      console.log(this.eventsByDate)
     });
   }
 
