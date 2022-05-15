@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MatOptgroup } from '@angular/material/core';
-import { filter, map, tap } from 'rxjs';
+import { map } from 'rxjs';
 import { EventService } from 'src/app/services/events/event.service';
 import { DateEvents } from 'src/app/shared/models/date-events.model';
-import { Event, whichEventComesFirst } from 'src/app/shared/models/event.model';
+import { whichEventComesFirst } from 'src/app/shared/models/event.model';
 
 @Component({
   selector: 'app-event-grid',
