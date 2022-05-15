@@ -19,3 +19,11 @@ export interface Event {
     private: boolean;
     __v: number;
 }
+
+export function whichEventComesFirst(event1: Event, event2: Event)  {
+    let diff = event1.startTime.localeCompare(event2.startTime);
+    if(diff !== 0) return diff;
+    diff = event1.endTime.localeCompare(event2.endTime);
+    if(diff !== 0) return diff;
+    return 1;
+}
