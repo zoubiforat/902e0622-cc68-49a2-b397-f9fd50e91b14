@@ -12,3 +12,7 @@ a, a:hover, a:focus, a:active {
     object-fit: cover; /*this makes the image in src fit to the size specified below*/
     height: 450px;
 }
+
+mat-card-subtitle {
+    color: black;
+}
