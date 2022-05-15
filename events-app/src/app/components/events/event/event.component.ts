@@ -4,7 +4,7 @@ import { Event } from 'src/app/shared/models/event.model';
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  styleUrls: ['./event.component.scss']
 })
 export class EventComponent implements OnInit {
 

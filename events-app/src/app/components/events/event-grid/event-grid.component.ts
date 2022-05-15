@@ -8,7 +8,7 @@ import { Event, whichEventComesFirst } from 'src/app/shared/models/event.model';
 @Component({
   selector: 'app-event-grid',
   templateUrl: './event-grid.component.html',
-  styleUrls: ['./event-grid.component.css']
+  styleUrls: ['./event-grid.component.scss']
 })
 export class EventGridComponent implements OnInit {
 
