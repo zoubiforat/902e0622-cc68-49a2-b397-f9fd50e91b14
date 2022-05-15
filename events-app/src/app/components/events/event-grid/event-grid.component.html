@@ -1,7 +1,7 @@
 <div *ngFor="let dateEvents of eventsByDate">
     <div class="container">
         <div class="row">
-            <h2 color="primary">{{ dateEvents.date }}</h2>
+            <h2 class="primaryColorClr">{{ dateEvents.date | date: 'EE MMM d y' | uppercase }}</h2>
         </div>
         <div class="row">
             <app-event *ngFor="let event of dateEvents.events" class="col-sm-12 col-lg-6 col-xl-4 mb-3" [eventInput]="event"></app-event>
