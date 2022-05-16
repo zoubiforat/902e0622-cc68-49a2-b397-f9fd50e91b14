@@ -8,7 +8,7 @@ import { Event } from 'src/app/shared/models/event.model';
 })
 export class EventService {
 
-  private server_url: string = 'http://localhost:3000';
+  private server_url: string = 'https://tlv-events-app.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 
