@@ -1,7 +1,12 @@
 <mat-toolbar color="primary">
     <app-search-bar class="mr-auto"></app-search-bar>
-    <button mat-icon-button routerLink="shoppingCart" class="ml-auto">
-        <mat-icon *ngIf="cartCount > 0" matBadge="{{ cartCount }}" matBadgeColor="warn">shopping_cart</mat-icon>
-        <mat-icon *ngIf="cartCount === 0">shopping_cart</mat-icon>
-    </button>
+    <div class="ml-autos">
+        <button mat-icon-button routerLink="events" matTooltip="Events">
+            <mat-icon>event</mat-icon>
+        </button>
+        <button mat-icon-button routerLink="shoppingCart" matTooltip="Shopping Cart">
+            <mat-icon *ngIf="cartCount > 0" matBadge="{{ cartCount }}" matBadgeColor="warn">shopping_cart</mat-icon>
+            <mat-icon *ngIf="cartCount === 0">shopping_cart</mat-icon>
+        </button>
+    </div>
 </mat-toolbar>
