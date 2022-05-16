@@ -1,5 +1,23 @@
 @import "../../../variables";
 
-h4 {
+
+
+.date-row {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.date-container {
+    background-color: rgb(255, 255, 255, .75);
+    width: 100%;
+}
+
+h3 {
     color: $primary;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
