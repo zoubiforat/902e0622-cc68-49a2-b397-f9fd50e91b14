@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToolbarComponent } from './components/toolbar/toolbar/toolbar.component';
 import { ShoppingCartListComponent } from './components/cart/shopping-cart-list/shopping-cart-list.component';
 import { AllEventsComponent } from './components/events/all-events/all-events.component';
-import { SearchBarComponent } from './components/shared/search-bar/search-bar.component';
+import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchBarComponent } from './components/shared/search-bar/search-bar.co
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

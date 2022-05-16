@@ -3,6 +3,7 @@ import { map } from 'rxjs';
 import { EventService } from 'src/app/services/events/event.service';
 import { DateEvents } from 'src/app/shared/models/date-events.model';
 import { whichEventComesFirst } from 'src/app/shared/models/event.model';
+import { SearchService } from 'src/app/shared/services/search/search.service';
 
 @Component({
   selector: 'app-all-events',
@@ -12,17 +13,19 @@ import { whichEventComesFirst } from 'src/app/shared/models/event.model';
 export class AllEventsComponent implements OnInit {
 
   eventsByDate: DateEvents[] = [];
+  searchInput: string = '';
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private searchService: SearchService) { }
 
   ngOnInit(): void {
+    this.subscribeToSearchBox();
     this.getEvents();
   }
 
   getEvents(): void {
     this.eventService.getEvents()
     .pipe(
-      map(events => events.filter(event => event.date && event.startTime && event.endTime)),
+      map(events => events.filter(event => event.date && event.startTime && event.endTime && event.title.includes(this.searchInput))),
       map(events => {
         let dateEvents = new Map<string, DateEvents>();
         events.forEach(event => {
@@ -42,6 +45,14 @@ export class AllEventsComponent implements OnInit {
       )
     .subscribe(data => {
       this.eventsByDate = data;
+    });
+  }
+
+  subscribeToSearchBox(): void {
+    this.searchService.getSearchInput()
+    .subscribe(data => {
+      this.searchInput = data;
+      this.getEvents();
     });
   }
 

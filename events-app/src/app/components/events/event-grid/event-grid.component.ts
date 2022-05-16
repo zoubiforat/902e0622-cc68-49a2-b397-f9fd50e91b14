@@ -13,7 +13,7 @@ export class EventGridComponent implements OnInit {
 
   @Input() eventsByDate: DateEvents[] = [];
 
-  constructor(private eventService: EventService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
